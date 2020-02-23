@@ -10,6 +10,7 @@ package UserInterface.Customer;
  * @author Girija Dhawale
  */
 
+import Business.AirlineDirectory;
 import Business.Customer;
 import Business.CustomerDirectory;
 import Business.FlightDetails;
@@ -36,6 +37,8 @@ public class FlightFilterData extends javax.swing.JPanel {
 ArrayList<FlightDetails> customerSearch;
  private CustomerDirectory custDict;
  String p;
+ private AirlineDirectory airlineDirectory;
+ 
 
    
 
@@ -44,6 +47,7 @@ ArrayList<FlightDetails> customerSearch;
         this.CardSequenceJPanel=CardSequenceJPanel;
         this.customerSearch=customerSearch;
         this.custDict=custDict;
+        this.airlineDirectory=airlineDirectory;
         populate10();
         
         
@@ -61,12 +65,12 @@ ArrayList<FlightDetails> customerSearch;
         //Collections.sort(customerSearch);
         for(FlightDetails fdd : customerSearch){
         Object[] row = new Object[dtm.getColumnCount()];
-        row[0]=fdd;
+        row[0]=fdd.getFlightNumber();
         row[1]=fdd.getDeparture();
         row[2]=fdd.getArrival();
         row[3]=fdd.getDepartureDate();
-        //row[4]=fdd.getPrice();
-        //row[5]=fdd.getSeats();
+        row[4]=fdd.getPrice();
+        //row[5]=fdd.;
         dtm.addRow(row);
         }
     }
@@ -93,7 +97,7 @@ ArrayList<FlightDetails> customerSearch;
         btnConfirmBooking = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(242, 225, 229));
+        setBackground(new java.awt.Color(51, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
@@ -137,12 +141,12 @@ ArrayList<FlightDetails> customerSearch;
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setText("Name:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, -1));
         add(txtCustomerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 220, 42));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Phone:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, -1, -1));
 
         txtPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,8 +156,8 @@ ArrayList<FlightDetails> customerSearch;
         add(txtPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 220, 42));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel3.setText("Passport No");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 540, -1, -1));
+        jLabel3.setText("Passport No:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, -1, -1));
         add(txtPassportNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 540, 220, 42));
 
         btnConfirmBooking.setBackground(new java.awt.Color(255, 255, 255));

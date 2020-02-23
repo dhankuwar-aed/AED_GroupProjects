@@ -80,7 +80,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(242, 225, 229));
+        setBackground(new java.awt.Color(51, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
@@ -96,44 +96,56 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setText("Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, -1, 42));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, 42));
         add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 260, 42));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Phone ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, 42));
-        add(txtPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 260, 42));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, 42));
+        add(txtPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 260, 42));
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 255));
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Passport No");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, -1, 42));
-        add(txtPassport, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 260, 42));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, 42));
+        add(txtPassport, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 260, 42));
 
         jLabel4.setBackground(new java.awt.Color(204, 204, 255));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setText("Flight Number");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, -1, 42));
-        add(txtFlightNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 260, 42));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, 42));
+
+        txtFlightNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFlightNumberActionPerformed(evt);
+            }
+        });
+        add(txtFlightNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 260, 42));
 
         jLabel5.setBackground(new java.awt.Color(204, 204, 255));
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel5.setText("Departure");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, -1, 42));
-        add(txtSource, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 260, 42));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, 42));
+
+        txtSource.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSourceActionPerformed(evt);
+            }
+        });
+        add(txtSource, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 260, 42));
 
         jLabel6.setBackground(new java.awt.Color(204, 204, 255));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel6.setText("Arrival");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, 42));
-        add(txtDeastination, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 260, 42));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, 42));
+        add(txtDeastination, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 260, 42));
 
         jLabel7.setBackground(new java.awt.Color(204, 204, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel7.setText("Price");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 560, -1, 42));
-        add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 260, 42));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, -1, 42));
+        add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 260, 42));
 
         btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
         btnUpdate.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -208,6 +220,14 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         // TODO add your handling code here:
         backAction();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtFlightNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFlightNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFlightNumberActionPerformed
+
+    private void txtSourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSourceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSourceActionPerformed
 private void backAction() {
         CardSequenceJPanel.remove(this);
         Component[] componentArray = CardSequenceJPanel.getComponents();

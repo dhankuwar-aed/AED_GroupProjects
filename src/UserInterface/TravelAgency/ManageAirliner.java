@@ -47,7 +47,7 @@ public class ManageAirliner extends javax.swing.JPanel {
         btnManageAirliner = new javax.swing.JButton();
         btnViewCustomer = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(242, 225, 229));
+        setBackground(new java.awt.Color(51, 204, 255));
 
         btnManageAirliner.setBackground(new java.awt.Color(255, 255, 255));
         btnManageAirliner.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
