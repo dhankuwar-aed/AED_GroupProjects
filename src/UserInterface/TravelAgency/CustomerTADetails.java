@@ -61,7 +61,7 @@ public class CustomerTADetails extends javax.swing.JPanel {
         tableCustomerDetails = new javax.swing.JTable();
         btnViewDetails = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(242, 225, 229));
+        setBackground(new java.awt.Color(51, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,7 +73,7 @@ public class CustomerTADetails extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 188, 50));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 30, 170, 50));
 
         tableCustomerDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

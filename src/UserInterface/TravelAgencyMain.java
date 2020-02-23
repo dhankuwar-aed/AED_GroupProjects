@@ -74,7 +74,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        upperJPanel.setBackground(new java.awt.Color(102, 201, 116));
+        upperJPanel.setBackground(new java.awt.Color(149, 165, 166));
         upperJPanel.setPreferredSize(new java.awt.Dimension(1328, 34));
 
         btnTravelAgency.setBackground(new java.awt.Color(255, 255, 255));
@@ -146,7 +146,6 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJPanel.setBackground(new java.awt.Color(255, 255, 255));
         CardSequenceJPanel.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/airplane.gif")); // NOI18N
         jLabel1.setText("Northeastern Travel Agency ");
         CardSequenceJPanel.add(jLabel1, "card2");
 
@@ -228,7 +227,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
 
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         // TODO add your handling code here:
-        CustomerSpecification cs= new CustomerSpecification(CardSequenceJPanel,airDirectory,custDirectory);
+        CustomerSpecification cs= new CustomerSpecification(CardSequenceJPanel,airDirectory,custDirectory,flightDetailsDirectory);
         CardSequenceJPanel.add("CustomerSpecification",cs);
          CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
         layout.next(CardSequenceJPanel);

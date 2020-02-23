@@ -81,7 +81,7 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         txtArrDate = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(242, 225, 229));
+        setBackground(new java.awt.Color(51, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
