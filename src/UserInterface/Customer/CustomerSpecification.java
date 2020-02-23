@@ -10,6 +10,7 @@ import Business.Airliner;
 import Business.CustomerDirectory;
 import Business.FlightDetails;
 import Business.FlightDetailsDirectory;
+import Business.Seats;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -29,14 +30,16 @@ public class CustomerSpecification extends javax.swing.JPanel {
     private ArrayList<FlightDetails> customerSearch;
     private CustomerDirectory custDict;
     private FlightDetailsDirectory flightDetailsDirectory;
+    private Seats seats;
     
-    public CustomerSpecification(JPanel CardSequenceJPanel, AirlineDirectory airDict,CustomerDirectory custDict,FlightDetailsDirectory flightDetailsDirectory) {
+    public CustomerSpecification(JPanel CardSequenceJPanel, AirlineDirectory airDict,CustomerDirectory custDict,FlightDetailsDirectory flightDetailsDirectory, Seats seats) {
         initComponents();
         this.CardSequenceJPanel=CardSequenceJPanel;
         this.airDict=airDict;
         customerSearch= new ArrayList<FlightDetails>();
         this.custDict=custDict;
         this.flightDetailsDirectory = flightDetailsDirectory;
+        this.seats = seats;
     }
 
     /**
@@ -291,7 +294,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Flight not Found!!"); 
         }
         else{
-            FlightFilterData ffd = new FlightFilterData(CardSequenceJPanel, customerSearch,custDict);
+            FlightFilterData ffd = new FlightFilterData(CardSequenceJPanel, customerSearch,custDict,seats);
             CardSequenceJPanel.add("flightfilterdata",ffd);
             CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
             layout.next(CardSequenceJPanel);
