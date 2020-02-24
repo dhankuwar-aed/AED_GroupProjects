@@ -77,7 +77,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        upperJPanel.setBackground(new java.awt.Color(149, 165, 166));
+        upperJPanel.setBackground(new java.awt.Color(73, 0, 153));
         upperJPanel.setPreferredSize(new java.awt.Dimension(1328, 34));
 
         btnTravelAgency.setBackground(new java.awt.Color(255, 255, 255));
@@ -110,6 +110,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
             }
         });
 
+        logoutBtn.setBackground(new java.awt.Color(255, 255, 255));
         logoutBtn.setText("Logout");
         logoutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +129,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
                 .addComponent(btnAirliner)
                 .addGap(72, 72, 72)
                 .addComponent(btnCustomer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
                 .addComponent(logoutBtn)
                 .addGap(146, 146, 146))
         );
@@ -149,6 +150,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJPanel.setBackground(new java.awt.Color(255, 255, 255));
         CardSequenceJPanel.setLayout(new java.awt.CardLayout());
 
+        jLabel1.setBackground(new java.awt.Color(73, 0, 153));
         jLabel1.setText("Northeastern Travel Agency ");
         CardSequenceJPanel.add(jLabel1, "card2");
 
@@ -244,7 +246,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJPanel.setBackground(new java.awt.Color(255, 255, 255));
         CardSequenceJPanel.setLayout(new java.awt.CardLayout());
 
-        //jLabel1.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/airplane.gif")); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon("/Users/Girija Dhawale/Desktop/Group/AED_GroupProjects")); // NOI18N
         jLabel1.setText("Northeastern Travel Agency ");
         CardSequenceJPanel.add(jLabel1, "card2");
 
