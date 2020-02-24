@@ -14,6 +14,7 @@ public class Customer {
     private String passportNumber;
     private String phoneNumber;
     private String email;
+    private String setSeatNo;
 
     public String getName() {
         return name;
@@ -46,5 +47,14 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getSetSeatNo() {
+        return setSeatNo;
+    }
+
+    public void setSetSeatNo(String setSeatNo) {
+        this.setSeatNo = setSeatNo;
+    }
+    
     
 }
