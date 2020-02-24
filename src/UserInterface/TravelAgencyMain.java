@@ -171,7 +171,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private void btnTravelAgencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTravelAgencyActionPerformed
         // TODO add your handling code here:
         if(this.loggedInSession){
-            ManageAirliner ma = new ManageAirliner(CardSequenceJPanel, custDirectory, airDirectory, fleetDirectory,airlinerDirectory);
+            ManageAirliner ma = new ManageAirliner(CardSequenceJPanel, custDirectory, airDirectory, fleetDirectory,airlinerDirectory,flightDetailsDirectory);
             CardSequenceJPanel.add(ma);
             CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
             layout.next(CardSequenceJPanel);
@@ -198,7 +198,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
                         System.out.println("Login successful");
                         loggedInSession = true;
                         logoutBtn.setVisible(true);
-                        ManageAirliner ma = new ManageAirliner(CardSequenceJPanel, custDirectory, airDirectory, fleetDirectory,airlinerDirectory);
+                        ManageAirliner ma = new ManageAirliner(CardSequenceJPanel, custDirectory, airDirectory, fleetDirectory,airlinerDirectory,flightDetailsDirectory);
                         CardSequenceJPanel.add(ma);
                         CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
                         layout.next(CardSequenceJPanel);
