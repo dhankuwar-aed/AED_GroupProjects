@@ -8,6 +8,7 @@ import Business.CustomerDirectory;
 import Business.AirlineDirectory;
 import Business.AirlinerDirectory;
 import Business.FleetDirectory;
+import Business.FlightDetailsDirectory;
 import java.awt.CardLayout;
 
 import javax.swing.JPanel;
@@ -26,13 +27,15 @@ public class ManageAirliner extends javax.swing.JPanel {
     private CustomerDirectory custDict;
     private FleetDirectory fleetdirectory;
     private AirlinerDirectory airlinerDirectory;
-    public ManageAirliner(JPanel CardSequenceJPanel, CustomerDirectory custDirecr, AirlineDirectory airDirect, FleetDirectory fleetdirectory,AirlinerDirectory airlinerDirectory) {
+    private FlightDetailsDirectory flightDetailsDirectory;
+    public ManageAirliner(JPanel CardSequenceJPanel, CustomerDirectory custDirecr, AirlineDirectory airDirect, FleetDirectory fleetdirectory,AirlinerDirectory airlinerDirectory,FlightDetailsDirectory flightDetailsDirectory) {
           initComponents();
           this.CardSequenceJPanel=CardSequenceJPanel;
           this.custDict= custDirecr;
           this.airDict=airDirect;
           this.fleetdirectory=fleetdirectory;
           this.airlinerDirectory = airlinerDirectory;
+          this.flightDetailsDirectory = flightDetailsDirectory;
     }
 
     /**
@@ -101,7 +104,7 @@ public class ManageAirliner extends javax.swing.JPanel {
 
     private void btnViewCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewCustomerActionPerformed
         // TODO add your handling code here:
-        CustomerTADetails cdp = new CustomerTADetails(CardSequenceJPanel,custDict);
+        CustomerTADetails cdp = new CustomerTADetails(CardSequenceJPanel,custDict,flightDetailsDirectory);
         CardSequenceJPanel.add("customerdetailsJPanel",cdp);
         CardLayout layout=(CardLayout) CardSequenceJPanel.getLayout();
         layout.next(CardSequenceJPanel);

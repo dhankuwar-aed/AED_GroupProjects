@@ -6,6 +6,9 @@
 package UserInterface.TravelAgency;
 
 import Business.Customer;
+import Business.CustomerDirectory;
+import Business.FlightDetails;
+import Business.FlightDetailsDirectory;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.HeadlessException;
@@ -25,21 +28,34 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
      */
      private JPanel CardSequenceJPanel;
     private Customer c;
+    private FlightDetails flightDetails;
+    private FlightDetailsDirectory flightDetailsDirectory;
+    private CustomerDirectory customerDirectory;
 
-    ViewCustomerDetails(JPanel CardSequenceJPanel, Customer c) {
+    ViewCustomerDetails(JPanel CardSequenceJPanel, int bookingId, String flightNo,CustomerDirectory customerDirectory, FlightDetailsDirectory flightDetailsDirectory) {
         initComponents();
         this.CardSequenceJPanel=CardSequenceJPanel;
-        this.c=c;
-        
+        this. flightDetailsDirectory = flightDetailsDirectory;
+        this.customerDirectory = customerDirectory;
+        for(Customer i: customerDirectory.getCustomerDirect()){
+            if(i.getBookingId() == bookingId){
+                this.c = i;
+            }
+        }
+        for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
+            if(f.getFlightNumber() == flightNo){
+                this.flightDetails = f;
+            }
+        }
         txtName.setText(c.getName());
         txtPhoneNo.setText(c.getPhoneNumber());
         txtPassport.setText(c.getPassportNumber());
         //custflighttxt.setText(c.getCustflight());
-//        txtFlightNumber.setText(c.getFightNumber());
-//        txtSource.setText(c.getDeparture());
-//        txtDeastination.setText(c.getArrival());
-//        txtPrice.setText(String.valueOf(c.getPrice()));
-        //datetxt.setText(c.getDate());
+        txtFlightNumber.setText(flightDetails.getFlightNumber());
+        txtSource.setText(flightDetails.getDeparture());
+        txtDeastination.setText(flightDetails.getArrival());
+        txtPrice.setText(String.valueOf(flightDetails.getPrice()));
+        //datetxt.setText(flightDetails.getDepartureDate());
         
         txtName.setEditable(false);
         txtPhoneNo.setEditable(false);

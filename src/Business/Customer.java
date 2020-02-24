@@ -15,6 +15,8 @@ public class Customer {
     private String phoneNumber;
     private String email;
     private String setSeatNo;
+    private String flightNumer;
+    private int BookingId;
 
     public String getName() {
         return name;
@@ -55,6 +57,23 @@ public class Customer {
     public void setSetSeatNo(String setSeatNo) {
         this.setSeatNo = setSeatNo;
     }
+
+    public String getFlightNumer() {
+        return flightNumer;
+    }
+
+    public void setFlightNumer(String flightNumer) {
+        this.flightNumer = flightNumer;
+    }
+
+    public int getBookingId() {
+        return BookingId;
+    }
+
+    public void setBookingId(int BookingId) {
+        this.BookingId = BookingId;
+    }
+    
     
     
 }

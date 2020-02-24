@@ -23,6 +23,7 @@ import java.awt.CardLayout;
 import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -206,66 +207,59 @@ ArrayList<FlightDetails> customerSearch;
 
     private void btnConfirmBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmBookingActionPerformed
         // TODO add your handling code here:
-        int selectedrow=tableFlightClassification.getSelectedRow();
-        String name=txtCustomerName.getText().trim();
-        
-        if(txtCustomerName.getText().isEmpty()|| txtPhoneNumber.getText().isEmpty()|| txtPassportNumber.getText().isEmpty()){
-             JOptionPane.showMessageDialog(null,"Please Enter all the fields");
-        }
-        else{
-       
-            if(selectedrow >=0 && !name.isEmpty())
-        {
-        
-        String phoneno=txtPhoneNumber.getText().trim();
-        
-        String passport=txtPassportNumber.getText().trim();
-        
-        String seatNo = (String) seatsComboBox.getSelectedItem();
-        if(!phonePatternCorrect()) {
-         JOptionPane.showMessageDialog(CardSequenceJPanel, "Enter valid phone number");
-        }else{  
-            Customer c=custDict.addCustomer();
-        c.setName(name);
-        c.setPhoneNumber(phoneno);
-        c.setPassportNumber(passport);
-        c.setSetSeatNo(seatNo);
+        int selectedrow = tableFlightClassification.getSelectedRow();
+        String name = txtCustomerName.getText().trim();
+
+        if (txtCustomerName.getText().isEmpty() || txtPhoneNumber.getText().isEmpty() || txtPassportNumber.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please Enter all the fields");
+        } else {
+
+            if (selectedrow >= 0 && !name.isEmpty()) {
+
+                String phoneno = txtPhoneNumber.getText().trim();
+
+                String passport = txtPassportNumber.getText().trim();
+
+                String seatNo = (String) seatsComboBox.getSelectedItem();
+                if (!phonePatternCorrect()) {
+                    JOptionPane.showMessageDialog(CardSequenceJPanel, "Enter valid phone number");
+                } else {
+                    Random rand = new Random();
+                    Customer c = custDict.addCustomer();
+                    c.setName(name);
+                    c.setPhoneNumber(phoneno);
+                    c.setPassportNumber(passport);
+                    c.setSetSeatNo(seatNo);
         //c.setCustflight(custflight);
-//        FlightDetails fd=(FlightDetails) tableFlightClassification.getValueAt(selectedrow, 0);
-        
-       
-        int value=0;
-        //value=fd.getSeats();
-        if(value>0)
-        {
-        value--;
-        //fd.setSeats(value);
-        }
-        else{
-        JOptionPane.showMessageDialog(null,"Seats not available");
-        }
+                    String flightNo=(String) tableFlightClassification.getValueAt(selectedrow, 0);
+                    c.setFlightNumer(flightNo);
+                    c.setBookingId(rand.nextInt(1000000));
+//                    int value = 0;
+//                    //value=fd.getSeats();
+//                    if (value > 0) {
+//                        value--;
+//                        //fd.setSeats(value);
+//                    } else {
+//                        JOptionPane.showMessageDialog(null, "Seats not available");
+//                    }
 //        c.setFightNumber(fd.getFlightNumber());
 //        c.setDeparture(fd.getDeparture());
 //        c.setArrival(fd.getArrival());
-        //c.setPrice(fd.getPrice());
-        //c.setDate(fd.getDate());
-        
-       
-            JOptionPane.showMessageDialog(null,"Successfully Booked!!");
-            seats.bookSeats(Integer.parseInt(seatNo));
-            populate10();
-            
-         
-        
-        txtCustomerName.setText("");
-        txtPhoneNumber.setText("");
-        txtPassportNumber.setText("");
+                    //c.setPrice(fd.getPrice());
+                    //c.setDate(fd.getDate());
+
+                    JOptionPane.showMessageDialog(null, "Successfully Booked!!");
+                    seats.bookSeats(Integer.parseInt(seatNo));
+                    populate10();
+
+                    txtCustomerName.setText("");
+                    txtPhoneNumber.setText("");
+                    txtPassportNumber.setText("");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Cannot Book. Select flight first.");
+            }
         }
-        }
-        else{
-         JOptionPane.showMessageDialog(null,"Cannot Book. Select flight first.");
-        }
-          }
                                                     
         
     
@@ -273,14 +267,14 @@ ArrayList<FlightDetails> customerSearch;
 
     private void txtPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberActionPerformed
         // TODO add your handling code here:
-       /*int key=evt.getKeyCode();
-        if((key>=evt.VK_0 && key<=evt.VK_9)|| key==KeyEvent.VK_BACKSPACE)
-        {
-        txtPhone.setEditable(true);
-        }
-        else{
-        txtPhone.setEditable(false);
-        }*/
+//       int key=evt.getKeyCode();
+//        if((key>=evt.VK_0 && key<=evt.VK_9)|| key==KeyEvent.VK_BACKSPACE)
+//        {
+//        txtPhone.setEditable(true);
+//        }
+//        else{
+//        txtPhone.setEditable(false);
+//        }
     }//GEN-LAST:event_txtPhoneNumberActionPerformed
 
     private void seatsComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seatsComboBoxActionPerformed
@@ -292,16 +286,14 @@ ArrayList<FlightDetails> customerSearch;
         // TODO add your handling code here:
         int selectedrow=tableFlightClassification.getSelectedRow();
         if(selectedrow>=0){
+            seatsComboBox.removeAllItems();
             int seatCount=(int) tableFlightClassification.getValueAt(selectedrow, 5);
-            for(int i =1 ; i<=seatCount; i++){
-                if(seats.getSeatsTaken().size() > 0 && seats.getSeatsTaken().contains(i)){
-                    seatsComboBox.addItem(""+i+"");
-                }
-                else{
-                    seatsComboBox.addItem(""+i+"");
-                }
+            System.out.println(seatCount);
+            seats.setTotalSeats(seatCount);
+            ArrayList<Integer> availableSeats = seats.getAvailableSeats();
+            for(int i =0; i<availableSeats.size(); i++){
+                seatsComboBox.addItem(""+availableSeats.get(i)+"");
             }
-            
         }
     }//GEN-LAST:event_seatsComboBoxMouseClicked
 
