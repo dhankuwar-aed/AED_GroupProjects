@@ -118,7 +118,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         jLabel6.setText("Preferred Time ");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
 
-        DayNightComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "Morning", "Afternoon", "Night" }));
+        DayNightComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--Select--", "Morning", "Day Time", "Night" }));
         DayNightComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DayNightComboBoxActionPerformed(evt);
@@ -155,7 +155,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         // only departuredate
         else if(destination.isEmpty() && arrival.isEmpty() && !date.isEmpty() && price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getDepartureDate().equalsIgnoreCase(date)){
+            if(f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date)){
                 customerSearch.add(f);
             }
         }
@@ -175,7 +175,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         // only daytime
         else if(destination.isEmpty() && arrival.isEmpty() && date.isEmpty() && price.isEmpty() && dayTime != "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getPrice()== Integer.parseInt(price)){
+            if(f.getDayTime()== dayTime){
                 customerSearch.add(f);
             }
         }
@@ -195,7 +195,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         //destination place and departure date
         else if(!destination.isEmpty() && arrival.isEmpty() && !date.isEmpty() && price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getDeparture().equalsIgnoreCase(destination) && f.getDepartureDate().equalsIgnoreCase(date)){
+            if(f.getDeparture().equalsIgnoreCase(destination) && f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date)){
                 customerSearch.add(f);
             }
         }
@@ -225,7 +225,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         //arrival place and departure date
         else if(destination.isEmpty() && arrival.isEmpty() && !date.isEmpty() && !price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().equalsIgnoreCase(date)){
+            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date)){
                 customerSearch.add(f);
             }
         }
@@ -235,7 +235,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         //arrival place and departure date and departure place
         else if(!destination.isEmpty() && !arrival.isEmpty() && !date.isEmpty() && price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().equalsIgnoreCase(date) && f.getDeparture().equalsIgnoreCase(destination)){
+            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date) && f.getDeparture().equalsIgnoreCase(destination)){
                 customerSearch.add(f);
             }
         }
@@ -255,7 +255,7 @@ public class CustomerSpecification extends javax.swing.JPanel {
         //arrival place and price and departure date
         else if(destination.isEmpty() && !arrival.isEmpty() && !date.isEmpty() && !price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getArrival().equalsIgnoreCase(arrival) && f.getPrice()== Integer.parseInt(price) && f.getDepartureDate().equalsIgnoreCase(date)){
+            if(f.getArrival().equalsIgnoreCase(arrival) && f.getPrice()== Integer.parseInt(price) && f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date)){
                 customerSearch.add(f);
             }
         }
@@ -265,13 +265,14 @@ public class CustomerSpecification extends javax.swing.JPanel {
         //arrival place and price and departure date
         else if(destination.isEmpty() && !arrival.isEmpty() && !date.isEmpty() && price.isEmpty() && dayTime == "--Select--"){
             for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
-            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().equalsIgnoreCase(date)){
+            if(f.getArrival().equalsIgnoreCase(arrival) && f.getDepartureDate().toLocalDate().toString().equalsIgnoreCase(date)){
                 customerSearch.add(f);
             }
         }
             
         changePanel(customerSearch);
         }
+        
 //        for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
 //            if(f.getDeparture().equalsIgnoreCase(destination) && f.getArrival().equalsIgnoreCase(arrival)){
 //                customerSearch.add(f);

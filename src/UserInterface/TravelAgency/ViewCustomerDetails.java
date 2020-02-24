@@ -43,19 +43,24 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
             }
         }
         for(FlightDetails f: flightDetailsDirectory.getFlightDetailsDir()){
+            System.out.println("checking flight"+ f.getFlightNumber()+" " + flightNo);
             if(f.getFlightNumber() == flightNo){
                 this.flightDetails = f;
+                System.out.println("Found flight");
             }
         }
         txtName.setText(c.getName());
         txtPhoneNo.setText(c.getPhoneNumber());
         txtPassport.setText(c.getPassportNumber());
-        //custflighttxt.setText(c.getCustflight());
         txtFlightNumber.setText(flightDetails.getFlightNumber());
         txtSource.setText(flightDetails.getDeparture());
         txtDeastination.setText(flightDetails.getArrival());
         txtPrice.setText(String.valueOf(flightDetails.getPrice()));
-        //datetxt.setText(flightDetails.getDepartureDate());
+        depDateTextField.setText(flightDetails.getDepartureDate().toLocalDate()+" "+ flightDetails.getDepartureDate().toLocalTime());
+        arrivalDateTextField.setText(flightDetails.getArrivalDate().toLocalDate()+" "+ flightDetails.getArrivalDate().toLocalTime());
+        airlinerTxtField.setText(flightDetails.getAirliner());
+        emailTextField.setText(c.getEmail());
+        seatTextField.setText(c.getSetSeatNo());
         
         txtName.setEditable(false);
         txtPhoneNo.setEditable(false);
@@ -64,6 +69,11 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         txtSource.setEditable(false);
         txtPrice.setEditable(false);
         txtFlightNumber.setEditable(false);
+        depDateTextField.setEditable(false);
+        arrivalDateTextField.setEditable(false);
+        airlinerTxtField.setEditable(false);
+        emailTextField.setEditable(false);
+        seatTextField.setEditable(false);
     }
 
    
@@ -77,6 +87,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -95,6 +106,26 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        depDateTextField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        arrivalDateTextField = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        emailTextField = new javax.swing.JTextField();
+        seatTextField = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        airlinerTxtField = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+
+        jMenu1.setText("jMenu1");
 
         setBackground(new java.awt.Color(51, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -130,8 +161,14 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel4.setBackground(new java.awt.Color(204, 204, 255));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setText("Flight Number");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, 42));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, 42));
 
+        txtFlightNumber.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        txtFlightNumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtFlightNumberFocusGained(evt);
+            }
+        });
         txtFlightNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFlightNumberActionPerformed(evt);
@@ -142,7 +179,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel5.setBackground(new java.awt.Color(204, 204, 255));
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel5.setText("Departure");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, 42));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, 42));
 
         txtSource.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,13 +191,13 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel6.setBackground(new java.awt.Color(204, 204, 255));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel6.setText("Arrival");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, 42));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, 42));
         add(txtDeastination, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 260, 42));
 
         jLabel7.setBackground(new java.awt.Color(204, 204, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel7.setText("Price");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, -1, 42));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, -1, 42));
         add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 260, 42));
 
         btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
@@ -188,6 +225,81 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel8.setText("Booking Details");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
+
+        jLabel9.setText("Departure Date");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, -1, 30));
+
+        depDateTextField.setText("jTextField1");
+        add(depDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 260, -1));
+
+        jLabel10.setText("Arrival Date ");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 600, -1, -1));
+
+        arrivalDateTextField.setText("jTextField2");
+        add(arrivalDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 600, 260, -1));
+
+        jLabel11.setText("Email");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 150, -1, -1));
+
+        emailTextField.setText("jTextField1");
+        add(emailTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, -1, -1));
+
+        seatTextField.setText("jTextField2");
+        seatTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seatTextFieldActionPerformed(evt);
+            }
+        });
+        add(seatTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, -1, -1));
+
+        jLabel12.setText("Seat");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, -1, -1));
+
+        jLabel13.setText("Airliner");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, -1, -1));
+
+        airlinerTxtField.setText("jTextField3");
+        add(airlinerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, -1, -1));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel14.setText("i");
+        jLabel14.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 250, 20, 20));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel15.setText("i");
+        jLabel15.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 20, 20));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel16.setText("i");
+        jLabel16.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 20, 20));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel17.setText("i");
+        jLabel17.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 20, 20));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel18.setText("i");
+        jLabel18.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 510, 20, 20));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel19.setText("i");
+        jLabel19.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, 20, 20));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel20.setText("i");
+        jLabel20.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 600, 20, 20));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
+        jLabel21.setText("i");
+        jLabel21.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 20, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -195,10 +307,15 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
        txtName.setEditable(true);
         txtPhoneNo.setEditable(true);
         txtPassport.setEditable(true);
-        txtDeastination.setEditable(true);
-        txtSource.setEditable(true);
-        txtPrice.setEditable(true);
-        txtFlightNumber.setEditable(true);
+        //txtDeastination.setEditable(true);
+        //txtSource.setEditable(true);
+        //txtPrice.setEditable(true);
+        //txtFlightNumber.setEditable(true);
+        //depDateTextField.setEditable(true);
+        //arrivalDateTextField.setEditable(true);
+        //airlinerTxtField.setEditable(true);
+        emailTextField.setEditable(true);
+        //seatTextField.setEditable(true);
         
     }//GEN-LAST:event_btnUpdateActionPerformed
 
@@ -208,6 +325,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         String name= txtName.getText().trim();
         String phone=txtPhoneNo.getText().trim();
         String passport=txtPassport.getText().trim();
+        String email = emailTextField.getText().trim();
         
         if(!phonePatternCorrect()) {
          JOptionPane.showMessageDialog(CardSequenceJPanel, " Enter valid phone number");
@@ -215,6 +333,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         c.setName(name);
         c.setPhoneNumber(phone);
         c.setPassportNumber(passport);
+        c.setEmail(email);
         
         JOptionPane.showMessageDialog(null, "updated successfully");
         }
@@ -225,6 +344,11 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         txtSource.setEditable(false);
         txtPrice.setEditable(false);
         txtFlightNumber.setEditable(false);
+        depDateTextField.setEditable(false);
+        arrivalDateTextField.setEditable(false);
+        airlinerTxtField.setEditable(false);
+        emailTextField.setEditable(false);
+        seatTextField.setEditable(false);
         }
         catch(HeadlessException | NumberFormatException e)
             {
@@ -244,6 +368,14 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
     private void txtSourceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSourceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSourceActionPerformed
+
+    private void seatTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seatTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seatTextFieldActionPerformed
+
+    private void txtFlightNumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFlightNumberFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFlightNumberFocusGained
 private void backAction() {
         CardSequenceJPanel.remove(this);
         Component[] componentArray = CardSequenceJPanel.getComponents();
@@ -260,17 +392,36 @@ boolean phonePatternCorrect()  {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField airlinerTxtField;
+    private javax.swing.JTextField arrivalDateTextField;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JTextField depDateTextField;
+    private javax.swing.JTextField emailTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JTextField seatTextField;
     private javax.swing.JTextField txtDeastination;
     private javax.swing.JTextField txtFlightNumber;
     private javax.swing.JTextField txtName;

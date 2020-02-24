@@ -18,6 +18,9 @@ import UserInterface.TravelAgency.ManageAirliner;
 import UserInterface.Airliners.LoginAirliner;
 import UserInterface.Customer.CustomerSpecification;
 import java.awt.CardLayout;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -41,7 +44,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private Fleet fleet;
     private FlightDetailsDirectory flightDetailsDirectory;
     private Seats seats;
-    public TravelAgencyMain() {
+    public TravelAgencyMain() throws ParseException {
         initComponents();
         airDirectory= new AirlineDirectory();
         airlinerDirectory = new AirlinerDirectory();
@@ -284,7 +287,11 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TravelAgencyMain().setVisible(true);
+                try {
+                    new TravelAgencyMain().setVisible(true);
+                } catch (ParseException ex) {
+                    Logger.getLogger(TravelAgencyMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
