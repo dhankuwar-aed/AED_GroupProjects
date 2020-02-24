@@ -33,6 +33,7 @@ public class FlightDetailsDirectory {
         flightdetails.setDepartureDate("02-02-2020");
         flightdetails.setArrivalDate("02-02-2020");
         flightdetails.setPrice(500);
+        flightdetails.setSeats(20);
         flightDetailsDir.add(flightdetails);
     }
     
