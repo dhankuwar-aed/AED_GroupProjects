@@ -165,7 +165,7 @@
           <StringArray count="4">
             <StringItem index="0" value="--Select--"/>
             <StringItem index="1" value="Morning"/>
-            <StringItem index="2" value="Afternoon"/>
+            <StringItem index="2" value="Day Time"/>
             <StringItem index="3" value="Night"/>
           </StringArray>
         </Property>

@@ -117,7 +117,7 @@ public class CustomerTADetails extends javax.swing.JPanel {
         if(selectRow>=0)
         {
           int bookingId = (int) tableCustomerDetails.getValueAt(selectRow,0);
-          String flightNo = (String) tableCustomerDetails.getValueAt(selectRow,4);
+          String flightNo = (String) tableCustomerDetails.getValueAt(selectRow,1);
           ViewCustomerDetails vcd = new ViewCustomerDetails(this.CardSequenceJPanel,bookingId, flightNo, custDict, flightDetailsDirectory);
           CardSequenceJPanel.add("viewcustomerdetails",vcd);
           CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
