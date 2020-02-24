@@ -47,7 +47,7 @@ public class AddAirline extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(73, 0, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAddAirliner.setBackground(new java.awt.Color(255, 255, 255));
@@ -59,23 +59,24 @@ public class AddAirline extends javax.swing.JPanel {
                 btnAddAirlinerActionPerformed(evt);
             }
         });
-        add(btnAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 180, 60));
-        add(txtAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 320, 40));
+        add(btnAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 239, 90, -1));
+        add(txtAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 320, 40));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Airline Name");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 150, 50));
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnBack.setText("<<BACK");
+        btnBack.setText("<Back");
         btnBack.setBorder(new javax.swing.border.MatteBorder(null));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 170, 50));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 80, 25));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
