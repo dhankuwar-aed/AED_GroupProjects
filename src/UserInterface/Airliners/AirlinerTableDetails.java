@@ -92,30 +92,33 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
         btnView = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(73, 0, 153));
+        setPreferredSize(new java.awt.Dimension(1100, 550));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setBackground(new java.awt.Color(204, 204, 255));
+        btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnBack.setText("<<Back");
+        btnBack.setText("<Back");
         btnBack.setBorder(new javax.swing.border.MatteBorder(null));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 130, 50));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 80, 25));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Airliner Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 140, 60));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 160, 40));
 
         txtAirlineName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAirlineNameActionPerformed(evt);
             }
         });
-        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 330, 50));
+        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 330, 40));
 
         tableAirlinerInfo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tableAirlinerInfo.setModel(new javax.swing.table.DefaultTableModel(
@@ -144,7 +147,7 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
             tableAirlinerInfo.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 940, 390));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 940, 330));
 
         btnCreate.setBackground(new java.awt.Color(255, 255, 255));
         btnCreate.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -155,7 +158,7 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
                 btnCreateActionPerformed(evt);
             }
         });
-        add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 150, 60));
+        add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 80, 25));
 
         btnView.setBackground(new java.awt.Color(255, 255, 255));
         btnView.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -166,7 +169,7 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 150, 60));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 80, 25));
 
         btnDelete.setBackground(new java.awt.Color(255, 255, 255));
         btnDelete.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -177,7 +180,7 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 150, 60));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 80, 25));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
