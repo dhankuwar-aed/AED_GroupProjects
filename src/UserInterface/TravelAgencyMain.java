@@ -11,6 +11,7 @@ import Business.AirlinerDirectory;
 import Business.Fleet;
 import Business.FleetDirectory;
 import Business.FlightDetailsDirectory;
+import Business.Seats;
 import Business.User;
 import Business.UserDirectory;
 import UserInterface.TravelAgency.ManageAirliner;
@@ -39,6 +40,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
     private AirlinerDirectory airlinerDirectory;
     private Fleet fleet;
     private FlightDetailsDirectory flightDetailsDirectory;
+    private Seats seats;
     public TravelAgencyMain() {
         initComponents();
         airDirectory= new AirlineDirectory();
@@ -47,6 +49,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         fleetDirectory= new FleetDirectory(airDirectory.getAirlineDirectory(),airlinerDirectory.getAirlinerDirectory());
         userDirectory = new UserDirectory();
         flightDetailsDirectory = new FlightDetailsDirectory();
+        seats = new Seats();
         fleet = new Fleet(airDirectory.getAirlineDirectory(), airlinerDirectory.getAirlinerDirectory());
         this.loggedInSession = true;
         logoutBtn.setVisible(false);
@@ -227,7 +230,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
 
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         // TODO add your handling code here:
-        CustomerSpecification cs= new CustomerSpecification(CardSequenceJPanel,airDirectory,custDirectory,flightDetailsDirectory);
+        CustomerSpecification cs= new CustomerSpecification(CardSequenceJPanel,airDirectory,custDirectory,flightDetailsDirectory,seats);
         CardSequenceJPanel.add("CustomerSpecification",cs);
          CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
         layout.next(CardSequenceJPanel);
