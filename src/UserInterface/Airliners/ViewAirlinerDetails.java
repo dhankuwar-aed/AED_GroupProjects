@@ -7,9 +7,15 @@ package UserInterface.Airliners;
 
 import Business.Airline;
 import Business.FlightDetails;
+import static UserInterface.Airliners.CreateNewAirliner.parseDate;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.HeadlessException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -48,8 +54,8 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         txtSource.setText(fd.getDeparture());
         txtDestination.setText(fd.getArrival());
         txtSeats.setText(String.valueOf(airline.getSeats()));
-        txtDepDate.setText(fd.getDepartureDate());
-        txtArrDate.setText(fd.getArrivalDate());
+        txtDepDate.setText(fd.getDepartureDate().toLocalDate()+" "+ fd.getDepartureDate().toLocalTime());
+        txtArrDate.setText(fd.getArrivalDate().toLocalDate()+" "+fd.getArrivalDate().toLocalTime());
         txtPrice.setText(String.valueOf(fd.getPrice()));
 }
     
@@ -171,8 +177,7 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         layout.previous(CardSequenceJPanel);
     }
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-         //backAction();
+        // TODO add your handling code here:;
         CardSequenceJPanel.remove(this);
         CardLayout layout=(CardLayout)CardSequenceJPanel.getLayout();
         layout.previous(CardSequenceJPanel);
@@ -194,7 +199,15 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         txtArrDate.setEditable(true);
         txtPrice.setEditable(true);
     }//GEN-LAST:event_btnUpdateActionPerformed
-
+    
+    public static Date parseDate(String date) {
+     try {
+         return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(date);
+     } catch (ParseException e) {
+         return null;
+     }
+  }
+    
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         try{
@@ -210,12 +223,15 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
          if(!datePatternCorrect()) {
          JOptionPane.showMessageDialog(CardSequenceJPanel, "Please enter date in the mm-dd-yyyy format.");
         }else{       
+             DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                LocalDateTime depdate = LocalDateTime.parse(d, formatter);
+                LocalDateTime dateArr = LocalDateTime.parse(ad, formatter);
         fd.setFlightNumber(no);
         fd.setDeparture(src);
         fd.setArrival(dest);
         fd.setSeats(s);
-        fd.setDepartureDate(d);
-        fd.setArrivalDate(ad);
+        fd.setDepartureDate(depdate);
+        fd.setArrivalDate(dateArr);
         fd.setPrice(p);
         JOptionPane.showMessageDialog(null, "Airline Details Updated successfully");
 }
@@ -237,9 +253,7 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSeatsActionPerformed
 
 boolean datePatternCorrect()  {
-        Pattern p= Pattern.compile("^(0?[1-9]|1[012])[-]([0-2][0-9]|3[01])[-]([0-9]{4})$");
-        Matcher m = p.matcher(txtDepDate.getText());
-        return m.matches();
+        return true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

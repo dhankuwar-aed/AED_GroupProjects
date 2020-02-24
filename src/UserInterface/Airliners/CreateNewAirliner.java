@@ -15,6 +15,19 @@ import Business.FlightDetailsDirectory;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.HeadlessException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -97,10 +110,6 @@ private void backAction() {
         txtArrivalDate = new javax.swing.JTextField();
         datelabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(73, 0, 153));
 
@@ -121,17 +130,14 @@ private void backAction() {
         txtArrival.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtArrival.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        fnolabel.setBackground(null);
         fnolabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         fnolabel.setForeground(new java.awt.Color(255, 255, 255));
         fnolabel.setText("Flight Number");
 
-        sourcelabel.setBackground(null);
         sourcelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         sourcelabel.setForeground(new java.awt.Color(255, 255, 255));
         sourcelabel.setText("Departure");
 
-        destlabel.setBackground(null);
         destlabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         destlabel.setForeground(new java.awt.Color(255, 255, 255));
         destlabel.setText("     Arrival");
@@ -146,7 +152,6 @@ private void backAction() {
             }
         });
 
-        seatlabel.setBackground(null);
         seatlabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         seatlabel.setForeground(new java.awt.Color(255, 255, 255));
         seatlabel.setText("Seats");
@@ -156,12 +161,10 @@ private void backAction() {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create New Flight");
 
-        datelabel.setBackground(null);
         datelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         datelabel.setForeground(new java.awt.Color(255, 255, 255));
         datelabel.setText("Departure Date");
 
-        pricelabel.setBackground(null);
         pricelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         pricelabel.setForeground(new java.awt.Color(255, 255, 255));
         pricelabel.setText("Price");
@@ -201,12 +204,10 @@ private void backAction() {
         txtAirline.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtAirline.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setBackground(null);
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Airline");
 
-        jLabel3.setBackground(null);
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Airliner");
@@ -215,20 +216,9 @@ private void backAction() {
         txtArrivalDate.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtArrivalDate.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        datelabel1.setBackground(null);
         datelabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         datelabel1.setForeground(new java.awt.Color(255, 255, 255));
         datelabel1.setText("Arrival Date");
-
-        jLabel5.setBackground(null);
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Deparure Time");
-
-        jLabel6.setBackground(null);
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Arrival Time");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -250,24 +240,23 @@ private void backAction() {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
-                                .addGap(299, 299, 299)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(75, 75, 75)
+                                        .addGap(374, 374, 374)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel2)
                                             .addComponent(jLabel3)))
-                                    .addComponent(destlabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(seatlabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(datelabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(datelabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(pricelabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addComponent(jLabel6)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(299, 299, 299)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(destlabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(seatlabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(datelabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(datelabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(pricelabel, javax.swing.GroupLayout.Alignment.TRAILING)))))
                             .addComponent(sourcelabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtArrivalDate, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtDepDate, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -275,8 +264,7 @@ private void backAction() {
                             .addComponent(txtArrival, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtAirliner, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                             .addComponent(txtAirline, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(txtDeparture)
-                            .addComponent(jTextField2)))
+                            .addComponent(txtDeparture)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(430, 430, 430)
                         .addComponent(fnolabel)
@@ -311,35 +299,26 @@ private void backAction() {
                     .addComponent(txtDeparture, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sourcelabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtArrival, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(destlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seatlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDepDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(datelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtArrivalDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(datelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pricelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtArrival, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(destlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seatlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDepDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtArrivalDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pricelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(96, 96, 96)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -351,7 +330,15 @@ private void backAction() {
 
         backAction();
     }//GEN-LAST:event_backbtnActionPerformed
-
+    
+    public static Date parseDate(String date) {
+     try {
+         return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(date);
+     } catch (ParseException e) {
+         return null;
+     }
+  }
+    
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         // TODO add your handling code here:
         //if(notxt.getText().isEmpty() || sourcetxt.getText().isEmpty()|| desttxt.getText().isEmpty()||seattxt.getText().isEmpty()||datetxt.getText().isEmpty()||pricetxt.getText().isEmpty()){
@@ -360,9 +347,13 @@ private void backAction() {
                 String src=txtDeparture.getText().trim();
                 String dest=txtArrival.getText().trim();
                 int seat=Integer.parseInt(txtSeats.getText().trim());
-                String depdate=txtDepDate.getText().trim();
-                String arrivedate=txtArrivalDate.getText().trim();
+                String depdateString=txtDepDate.getText().trim();
+                String arrivedateString=txtArrivalDate.getText().trim();
                 int val=Integer.parseInt(txtPrice.getText().trim());
+                
+                DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                LocalDateTime depdate = LocalDateTime.parse(depdateString, formatter);
+                LocalDateTime dateArr = LocalDateTime.parse(arrivedateString, formatter);
                 
                    if(!datePatternCorrect()) {
          JOptionPane.showMessageDialog(CardSequenceJPanel, "Date sholud be the form of mm-dd-yyyy");
@@ -374,7 +365,7 @@ private void backAction() {
                 fd.setArrival(dest);
                 //fd.setSeats(seat);
                 fd.setDepartureDate(depdate);
-                fd.setArrivalDate(arrivedate);
+                fd.setArrivalDate(dateArr);
                 fd.setPrice(val);
                 flightDetailsDirectory.addFlight(fd);
 
@@ -386,6 +377,7 @@ private void backAction() {
                 txtSeats.setText("");
                 txtDepDate.setText("");
                 txtPrice.setText("");
+                txtArrivalDate.setText("");
             }
             
             catch(HeadlessException | NumberFormatException e)
@@ -403,9 +395,10 @@ private void backAction() {
     }//GEN-LAST:event_txtDepDateActionPerformed
 
      boolean datePatternCorrect()  {
-        Pattern p= Pattern.compile("^(0?[1-9]|1[012])[-]([0-2][0-9]|3[01])[-]([0-9]{4})$");
-        Matcher m = p.matcher(txtDepDate.getText());
-        return m.matches();
+//        Pattern p= Pattern.compile("^(0?[1-9]|1[012])[-]([0-2][0-9]|3[01])[-]([0-9]{4})$");
+//        Matcher m = p.matcher(txtDepDate.getText());
+//        return m.matches();
+         return true;
     }
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -419,10 +412,6 @@ private void backAction() {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel pricelabel;
     private javax.swing.JLabel seatlabel;
     private javax.swing.JLabel sourcelabel;

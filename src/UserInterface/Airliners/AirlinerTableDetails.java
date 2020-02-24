@@ -65,8 +65,8 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
                 row[1] = fd.getDeparture();
                 row[2] = fd.getArrival();
                 row[3] = airline.getSeats();
-                row[4] = fd.getDepartureDate();
-                row[5] = fd.getArrivalDate();
+                row[4] = fd.getDepartureDate().toLocalDate()+" "+ fd.getDepartureDate().toLocalTime();
+                row[5] = fd.getArrivalDate().toLocalDate()+" "+fd.getArrivalDate().toLocalTime();
                 row[6] = fd.getPrice();
             
                 model.addRow(row);
@@ -138,14 +138,6 @@ public class AirlinerTableDetails extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(tableAirlinerInfo);
-        if (tableAirlinerInfo.getColumnModel().getColumnCount() > 0) {
-            tableAirlinerInfo.getColumnModel().getColumn(0).setResizable(false);
-            tableAirlinerInfo.getColumnModel().getColumn(1).setResizable(false);
-            tableAirlinerInfo.getColumnModel().getColumn(2).setResizable(false);
-            tableAirlinerInfo.getColumnModel().getColumn(3).setResizable(false);
-            tableAirlinerInfo.getColumnModel().getColumn(4).setResizable(false);
-            tableAirlinerInfo.getColumnModel().getColumn(5).setResizable(false);
-        }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 940, 330));
 
