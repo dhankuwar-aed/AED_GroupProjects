@@ -68,7 +68,7 @@ public class ViewAirDetails extends javax.swing.JPanel {
         airlinerheading = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tableAirlinerDetails.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
@@ -98,11 +98,11 @@ public class ViewAirDetails extends javax.swing.JPanel {
             tableAirlinerDetails.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 1070, 180));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 1070, 230));
 
         airlinernamelbl.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        airlinernamelbl.setText("Airliner Name:");
-        add(airlinernamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 160, 50));
+        airlinernamelbl.setText("Airliner Name");
+        add(airlinernamelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 160, 40));
 
         txtAirlineName.setEnabled(false);
         txtAirlineName.addActionListener(new java.awt.event.ActionListener() {
@@ -110,23 +110,23 @@ public class ViewAirDetails extends javax.swing.JPanel {
                 txtAirlineNameActionPerformed(evt);
             }
         });
-        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 440, 42));
+        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 300, 30));
 
         airlinerheading.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         airlinerheading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         airlinerheading.setText("Airliner Details");
-        add(airlinerheading, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 410, 90));
+        add(airlinerheading, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 240, 60));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jButton1.setText("<<Back");
+        jButton1.setText("<Back");
         jButton1.setBorder(new javax.swing.border.MatteBorder(null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 170, 50));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 100, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAirlineNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAirlineNameActionPerformed

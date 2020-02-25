@@ -71,51 +71,57 @@ public class ViewFleet extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnBack.setText("<<Back");
+        btnBack.setText("<Back");
         btnBack.setBorder(new javax.swing.border.MatteBorder(null));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 60));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel1.setText("View Airplane");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel5.setText("Airline Name");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
+        txtAirlinerName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtAirlinerName.setEnabled(false);
-        add(txtAirlinerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 240, 42));
+        add(txtAirlinerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 250, 30));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, -1, -1));
 
+        txtName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 240, 42));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 250, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Model");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, -1));
-        add(txtModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 240, 42));
-        add(txtSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 240, 42));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+
+        txtModel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 250, 30));
+
+        txtSeats.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 250, 30));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setText("Seats");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
 
         btnSave.setBackground(new java.awt.Color(255, 255, 255));
         btnSave.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -126,7 +132,7 @@ public class ViewFleet extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 130, 50));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 100, 50));
 
         btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
         btnUpdate.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -137,7 +143,7 @@ public class ViewFleet extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 180, 50));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 450, 100, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

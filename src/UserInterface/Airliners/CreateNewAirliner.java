@@ -111,13 +111,13 @@ private void backAction() {
         datelabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(73, 0, 153));
+        setBackground(new java.awt.Color(220, 255, 255));
 
-        txtFlightNo.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtFlightNo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtFlightNo.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtFlightNo.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        txtDeparture.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtDeparture.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDeparture.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtDeparture.setSelectionColor(new java.awt.Color(255, 255, 255));
         txtDeparture.addActionListener(new java.awt.event.ActionListener() {
@@ -126,25 +126,25 @@ private void backAction() {
             }
         });
 
-        txtArrival.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtArrival.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtArrival.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtArrival.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         fnolabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        fnolabel.setForeground(new java.awt.Color(255, 255, 255));
+        fnolabel.setForeground(new java.awt.Color(51, 51, 51));
         fnolabel.setText("Flight Number");
 
         sourcelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        sourcelabel.setForeground(new java.awt.Color(255, 255, 255));
-        sourcelabel.setText("Departure");
+        sourcelabel.setForeground(new java.awt.Color(51, 51, 51));
+        sourcelabel.setText("Departure City");
 
         destlabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        destlabel.setForeground(new java.awt.Color(255, 255, 255));
-        destlabel.setText("     Arrival");
+        destlabel.setForeground(new java.awt.Color(51, 51, 51));
+        destlabel.setText("     Arrival City");
 
         backbtn.setBackground(new java.awt.Color(255, 255, 255));
         backbtn.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        backbtn.setText("<<Back");
+        backbtn.setText("<Back");
         backbtn.setBorder(new javax.swing.border.MatteBorder(null));
         backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,23 +153,22 @@ private void backAction() {
         });
 
         seatlabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        seatlabel.setForeground(new java.awt.Color(255, 255, 255));
+        seatlabel.setForeground(new java.awt.Color(51, 51, 51));
         seatlabel.setText("Seats");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create New Flight");
 
         datelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        datelabel.setForeground(new java.awt.Color(255, 255, 255));
-        datelabel.setText("Departure Date");
+        datelabel.setForeground(new java.awt.Color(51, 51, 51));
+        datelabel.setText("Departure Date(yyyy-MM-dd HH:mm:ss )");
 
         pricelabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        pricelabel.setForeground(new java.awt.Color(255, 255, 255));
+        pricelabel.setForeground(new java.awt.Color(51, 51, 51));
         pricelabel.setText("Price");
 
-        txtPrice.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        txtPrice.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtPrice.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtPrice.setSelectionColor(new java.awt.Color(255, 255, 255));
 
@@ -183,7 +182,7 @@ private void backAction() {
             }
         });
 
-        txtDepDate.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtDepDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtDepDate.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtDepDate.setSelectionColor(new java.awt.Color(255, 255, 255));
         txtDepDate.addActionListener(new java.awt.event.ActionListener() {
@@ -192,97 +191,99 @@ private void backAction() {
             }
         });
 
-        txtSeats.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtSeats.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtSeats.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtSeats.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        txtAirliner.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtAirliner.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtAirliner.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtAirliner.setSelectionColor(new java.awt.Color(255, 255, 255));
 
-        txtAirline.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtAirline.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtAirline.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtAirline.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Airline");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Airliner");
 
-        txtArrivalDate.setFont(new java.awt.Font("SansSerif", 0, 34)); // NOI18N
+        txtArrivalDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtArrivalDate.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtArrivalDate.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         datelabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        datelabel1.setForeground(new java.awt.Color(255, 255, 255));
-        datelabel1.setText("Arrival Date");
+        datelabel1.setForeground(new java.awt.Color(51, 51, 51));
+        datelabel1.setText("Arrival Date(yyyy-MM-dd HH:mm:ss)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(525, 525, 525))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(426, 426, 426)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(311, 311, 311)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel2)
+                                                .addComponent(jLabel3)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(262, 262, 262)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(destlabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(seatlabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(pricelabel, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                    .addComponent(sourcelabel))
+                                .addComponent(datelabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(374, 374, 374)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel3)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(299, 299, 299)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(destlabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(seatlabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(datelabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(datelabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(pricelabel, javax.swing.GroupLayout.Alignment.TRAILING)))))
-                            .addComponent(sourcelabel))
+                                    .addComponent(datelabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(fnolabel, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtArrivalDate, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtDepDate, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtSeats, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtArrival, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtAirliner, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(txtAirline, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(txtDeparture)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(fnolabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtFlightNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(447, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFlightNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtPrice, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtArrivalDate, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtDepDate, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtSeats, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtArrival, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtAirliner)
+                                .addComponent(txtAirline)
+                                .addComponent(txtDeparture, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(401, 401, 401)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(121, 121, 121)
+                            .addComponent(jLabel4)
+                            .addGap(465, 465, 465)
+                            .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(515, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(24, 24, 24)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(backbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fnolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFlightNo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -318,10 +319,14 @@ private void backAction() {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pricelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(96, 96, 96)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
