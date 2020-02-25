@@ -47,7 +47,7 @@ public class AddAirline extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(73, 0, 153));
+        setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAddAirliner.setBackground(new java.awt.Color(255, 255, 255));
@@ -59,13 +59,14 @@ public class AddAirline extends javax.swing.JPanel {
                 btnAddAirlinerActionPerformed(evt);
             }
         });
-        add(btnAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 239, 90, -1));
-        add(txtAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 320, 40));
+        add(btnAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 100, 50));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        txtAddAirliner.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        add(txtAddAirliner, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 300, 30));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setText("Airline Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 150, 50));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 150, 30));
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -76,7 +77,7 @@ public class AddAirline extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 80, 25));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

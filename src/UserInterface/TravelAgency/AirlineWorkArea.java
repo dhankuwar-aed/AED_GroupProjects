@@ -78,12 +78,12 @@ public class AirlineWorkArea extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         btnManageFleet = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel1.setText("Manage Airline");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 350, 90));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 230, 60));
 
         tableAirline.setBackground(new java.awt.Color(255, 255, 204));
         tableAirline.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -113,7 +113,7 @@ public class AirlineWorkArea extends javax.swing.JPanel {
             tableAirline.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 890, 340));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 890, 340));
 
         btnDelete.setBackground(new java.awt.Color(255, 255, 255));
         btnDelete.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -124,7 +124,7 @@ public class AirlineWorkArea extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 160, 40));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 150, 50));
 
         btnAddAirline.setBackground(new java.awt.Color(255, 255, 255));
         btnAddAirline.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -135,7 +135,7 @@ public class AirlineWorkArea extends javax.swing.JPanel {
                 btnAddAirlineActionPerformed(evt);
             }
         });
-        add(btnAddAirline, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 160, 40));
+        add(btnAddAirline, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 150, 40));
 
         btnViewDetails.setBackground(new java.awt.Color(255, 255, 255));
         btnViewDetails.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -146,18 +146,18 @@ public class AirlineWorkArea extends javax.swing.JPanel {
                 btnViewDetailsActionPerformed(evt);
             }
         });
-        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 160, 40));
+        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 150, 50));
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        btnBack.setText("<<Back");
+        btnBack.setText("<Back");
         btnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 120, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 90, 40));
 
         btnManageFleet.setBackground(new java.awt.Color(255, 255, 255));
         btnManageFleet.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -168,7 +168,7 @@ public class AirlineWorkArea extends javax.swing.JPanel {
                 btnManageFleetActionPerformed(evt);
             }
         });
-        add(btnManageFleet, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 160, 40));
+        add(btnManageFleet, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 150, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

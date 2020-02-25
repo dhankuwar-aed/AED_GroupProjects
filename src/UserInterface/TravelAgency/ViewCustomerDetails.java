@@ -127,42 +127,49 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
 
         jMenu1.setText("jMenu1");
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
-        btnBack.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        btnBack.setText("<<Back");
+        btnBack.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnBack.setText("<Back");
         btnBack.setBorder(new javax.swing.border.MatteBorder(null));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 160, 50));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setText("Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, 42));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 260, 42));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+
+        txtName.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 250, 30));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Phone ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, 42));
-        add(txtPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 260, 42));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 70, 30));
+
+        txtPhoneNo.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        add(txtPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 250, 30));
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 255));
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Passport No");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, -1, 42));
-        add(txtPassport, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 260, 42));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 120, 30));
+
+        txtPassport.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        add(txtPassport, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 250, 30));
 
         jLabel4.setBackground(new java.awt.Color(204, 204, 255));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setText("Flight Number");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, 42));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, -1, 30));
 
+        txtFlightNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtFlightNumber.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
         txtFlightNumber.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -174,31 +181,36 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
                 txtFlightNumberActionPerformed(evt);
             }
         });
-        add(txtFlightNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 260, 42));
+        add(txtFlightNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, 250, 30));
 
         jLabel5.setBackground(new java.awt.Color(204, 204, 255));
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel5.setText("Departure");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, 42));
+        jLabel5.setText("Departure City");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, -1, 30));
 
+        txtSource.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtSource.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSourceActionPerformed(evt);
             }
         });
-        add(txtSource, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 260, 42));
+        add(txtSource, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 170, 250, 30));
 
         jLabel6.setBackground(new java.awt.Color(204, 204, 255));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel6.setText("Arrival");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, 42));
-        add(txtDeastination, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 260, 42));
+        jLabel6.setText("Arrival City");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 210, -1, 42));
+
+        txtDeastination.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtDeastination, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 220, 250, 30));
 
         jLabel7.setBackground(new java.awt.Color(204, 204, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel7.setText("Price");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, -1, 42));
-        add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 260, 42));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, -1, 42));
+
+        txtPrice.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, 250, 30));
 
         btnUpdate.setBackground(new java.awt.Color(255, 255, 255));
         btnUpdate.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -209,7 +221,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
                 btnUpdateActionPerformed(evt);
             }
         });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 660, 170, 40));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 110, 50));
 
         btnSave.setBackground(new java.awt.Color(255, 255, 255));
         btnSave.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -220,86 +232,83 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 660, 180, 40));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, 110, 50));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel8.setText("Booking Details");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
+        jLabel8.setText("Update & View Booking Details");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel9.setText("Departure Date");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, -1, 30));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, -1, 30));
 
-        depDateTextField.setText("jTextField1");
-        add(depDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 260, -1));
+        depDateTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(depDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 320, 250, 30));
 
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel10.setText("Arrival Date ");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 600, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, -1, -1));
 
-        arrivalDateTextField.setText("jTextField2");
-        add(arrivalDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 600, 260, -1));
+        arrivalDateTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(arrivalDateTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, 250, 30));
 
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel11.setText("Email");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 150, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 70, 30));
 
-        emailTextField.setText("jTextField1");
-        add(emailTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, -1, -1));
+        emailTextField.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        add(emailTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 250, 30));
 
-        seatTextField.setText("jTextField2");
+        seatTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         seatTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seatTextFieldActionPerformed(evt);
             }
         });
-        add(seatTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, -1, -1));
+        add(seatTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 250, 30));
 
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel12.setText("Seat");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, -1, -1));
 
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel13.setText("Airliner");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, -1, -1));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 470, -1, -1));
 
-        airlinerTxtField.setText("jTextField3");
-        add(airlinerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, -1, -1));
+        airlinerTxtField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        add(airlinerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, 250, 30));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel14.setText("i");
         jLabel14.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 250, 20, 20));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 470, 20, 20));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel15.setText("i");
         jLabel15.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 20, 20));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 20, 20));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel16.setText("i");
         jLabel16.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 20, 20));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 20, 20));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel17.setText("i");
         jLabel17.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 20, 20));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 20, 20));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel18.setText("i");
         jLabel18.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 510, 20, 20));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 20, 20));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel19.setText("i");
         jLabel19.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, 20, 20));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 320, 20, 20));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel20.setText("i");
         jLabel20.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 600, 20, 20));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 20, 20));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("/Users/dhankuwarsisodiya/Downloads/AED_Group_Assignments-TravelAgency/download.png")); // NOI18N
         jLabel21.setText("i");
         jLabel21.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 20, 20));
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, 20, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
