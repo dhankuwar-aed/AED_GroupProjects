@@ -295,7 +295,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel17.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 30, 30));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Girija Dhawale\\Desktop\\AED_Project\\AED_GroupProjects\\src\\UserInterface\\TravelAgency\\circle-cropped.png")); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel18.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
         add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 270, 30, 30));
 

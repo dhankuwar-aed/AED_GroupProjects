@@ -5,8 +5,10 @@
  */
 package UserInterface.TravelAgency;
 
+import Business.AirlineDirectory;
 import Business.Airliner;
 import Business.FlightDetails;
+import Business.FlightDetailsDirectory;
 import com.sun.org.apache.xml.internal.dtm.DTM;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -23,10 +25,14 @@ public class ViewAirDetails extends javax.swing.JPanel {
      */
     private JPanel CardSequenceJPanel;
     private Airliner a;
-    public ViewAirDetails(JPanel CardSequenceJPanel, Airliner a) {
+    private FlightDetailsDirectory flightDetailsDirectory;
+    private AirlineDirectory airDict;
+    public ViewAirDetails(JPanel CardSequenceJPanel, Airliner a, FlightDetailsDirectory flightDetailsDirectory) {
         initComponents();
         this.a=a;
         this.CardSequenceJPanel=CardSequenceJPanel;
+        this.flightDetailsDirectory = flightDetailsDirectory;
+        //this.airDict = airDict;
         populate();
         
         txtAirlineName.setText(a.getAirlineName());
@@ -38,18 +44,19 @@ public class ViewAirDetails extends javax.swing.JPanel {
     public void populate(){
         DefaultTableModel dtm = (DefaultTableModel)tableAirlinerDetails.getModel();
         dtm.setRowCount(0);
+        for(FlightDetails fd : flightDetailsDirectory.getFlightDetailsDir()){
+        if(fd.getAirlineName().equalsIgnoreCase(a.getAirlineName())){
+            Object row[] = new Object[dtm.getColumnCount()];
+            row[0] = fd.getFlightNumber();
+            row[1] = fd.getDeparture();
+            row[2] = fd.getArrival();
+            row[3] = fd.getSeats();
+            row[4] = fd.getPrice();
+            row[5] = fd.getDepartureDate().toLocalDate()+" "+ fd.getDepartureDate().toLocalTime();
+            dtm.addRow(row);
+        }
         
-//        for(FlightDetails fd : a.getFlightDetailsDir().getFlightDetailsDir()){
-//        
-//        Object row[] = new Object[dtm.getColumnCount()];
-//            row[0] = fd;
-//            row[1] = fd.getDeparture();
-//            row[2] = fd.getArrival();
-//            //row[3] = fd.getSeats();
-//            //row[4] = fd.getPrice();
-//            row[5] = fd.getDepartureDate();
-//            dtm.addRow(row);
-//        }
+        }
         
     }
     /**
@@ -89,14 +96,6 @@ public class ViewAirDetails extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(tableAirlinerDetails);
-        if (tableAirlinerDetails.getColumnModel().getColumnCount() > 0) {
-            tableAirlinerDetails.getColumnModel().getColumn(0).setResizable(false);
-            tableAirlinerDetails.getColumnModel().getColumn(1).setResizable(false);
-            tableAirlinerDetails.getColumnModel().getColumn(2).setResizable(false);
-            tableAirlinerDetails.getColumnModel().getColumn(3).setResizable(false);
-            tableAirlinerDetails.getColumnModel().getColumn(4).setResizable(false);
-            tableAirlinerDetails.getColumnModel().getColumn(5).setResizable(false);
-        }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 1070, 230));
 
@@ -110,7 +109,7 @@ public class ViewAirDetails extends javax.swing.JPanel {
                 txtAirlineNameActionPerformed(evt);
             }
         });
-        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 300, 30));
+        add(txtAirlineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, 300, 40));
 
         airlinerheading.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         airlinerheading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

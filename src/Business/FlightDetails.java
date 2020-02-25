@@ -68,14 +68,16 @@ public class FlightDetails{
 
     public String getDayTime() {
         int hour = departureDate.getHour();
-        if(hour > 4 && hour < 12){
-            dayTime="Morning";
-        } else if(hour > 12 && hour < 18){
-            dayTime = "Day Time";
-        } else if(hour > 18 && hour < 4){
-            dayTime = "Night";
+        System.out.println(hour);
+        if(hour >= 4 && hour <= 12){
+            this.dayTime="Morning";
+        } else if(hour > 12 && hour <= 18){
+            this.dayTime = "Day Time";
+        } else if((hour > 18 && hour < 25) || (hour >= 1 && hour < 4) ){
+            this.dayTime = "Night";
         }
-        return dayTime;
+        System.out.println(this.dayTime);
+        return this.dayTime;
     }
 
     public void setDayTime(String dayTime) {

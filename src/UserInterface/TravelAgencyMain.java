@@ -54,7 +54,7 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         flightDetailsDirectory = new FlightDetailsDirectory();
         seats = new Seats();
         fleet = new Fleet(airDirectory.getAirlineDirectory(), airlinerDirectory.getAirlinerDirectory());
-        this.loggedInSession = true;
+        this.loggedInSession = false;
         logoutBtn.setVisible(false);
     }
 
@@ -154,6 +154,8 @@ public class TravelAgencyMain extends javax.swing.JFrame {
         CardSequenceJPanel.setLayout(new java.awt.CardLayout());
 
         jLabel1.setBackground(new java.awt.Color(73, 0, 153));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/airplane.gif"))); // NOI18N
         jLabel1.setText("Northeastern Travel Agency ");
         CardSequenceJPanel.add(jLabel1, "card2");
 

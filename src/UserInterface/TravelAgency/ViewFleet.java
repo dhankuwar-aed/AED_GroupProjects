@@ -40,11 +40,11 @@ public class ViewFleet extends javax.swing.JPanel {
         
         txtName.setText(airline.getAirlineName()); 
         txtModel.setText(String.valueOf(airline.getAirlineNo()));
-        txtSeats.setText(String.valueOf(airline.getSeats()));
+        //txtSeats.setText(String.valueOf(airline.getSeats()));
         
         txtName.setEditable(false);
         txtModel.setEditable(false);
-        txtSeats.setEditable(false);
+        //txtSeats.setEditable(false);
             
             
     }
@@ -66,8 +66,6 @@ public class ViewFleet extends javax.swing.JPanel {
         txtName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtModel = new javax.swing.JTextField();
-        txtSeats = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
 
@@ -116,13 +114,6 @@ public class ViewFleet extends javax.swing.JPanel {
         txtModel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 250, 30));
 
-        txtSeats.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        add(txtSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 250, 30));
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel4.setText("Seats");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
-
         btnSave.setBackground(new java.awt.Color(255, 255, 255));
         btnSave.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         btnSave.setText("Save");
@@ -155,7 +146,7 @@ public class ViewFleet extends javax.swing.JPanel {
         // TODO add your handling code here:
         txtName.setEditable(true);
         txtModel.setEditable(true);
-        txtSeats.setEditable(true);
+        //txtSeats.setEditable(true);
             
     }//GEN-LAST:event_btnUpdateActionPerformed
 
@@ -164,18 +155,18 @@ public class ViewFleet extends javax.swing.JPanel {
         try{
         String name= txtName.getText().trim();
         String model=txtModel.getText().trim();
-        int seat=Integer.parseInt(txtSeats.getText().trim());
+        //int seat=Integer.parseInt(txtSeats.getText().trim());
         
         
         airline.setAirlineName(name);
         airline.setAirlineNo(Integer.parseInt(model));
-        airline.setSeats(seat);
+        //airline.setSeats(seat);
         
         JOptionPane.showMessageDialog(null, "updated successfully");
         
         txtName.setEditable(false);
         txtModel.setEditable(false);
-        txtSeats.setEditable(false);
+        //txtSeats.setEditable(false);
         }
         catch(HeadlessException | NumberFormatException e)
             {
@@ -203,11 +194,9 @@ private void backAction() {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtAirlinerName;
     private javax.swing.JTextField txtModel;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtSeats;
     // End of variables declaration//GEN-END:variables
 }

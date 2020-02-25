@@ -9,6 +9,7 @@ import Business.AirlineDirectory;
 import Business.AirlinerDirectory;
 import Business.Airliner;
 import Business.FleetDirectory;
+import Business.FlightDetailsDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -28,13 +29,14 @@ public class AirlineWorkArea extends javax.swing.JPanel {
     private AirlineDirectory airdirect;
     private AirlinerDirectory airlinerDirectory;
     private FleetDirectory fleetDirectory;
-    
+    private FlightDetailsDirectory flightDetailsDirectory;
 
-    AirlineWorkArea(JPanel CardSequenceJPanel, AirlineDirectory airDict, AirlinerDirectory airlinerDirectory) {
+    AirlineWorkArea(JPanel CardSequenceJPanel, AirlineDirectory airDict, AirlinerDirectory airlinerDirectory,FlightDetailsDirectory flightDetailsDirectory) {
        initComponents();
        this.CardSequenceJPanel=CardSequenceJPanel;
        this.airdirect=airDict;
        this.airlinerDirectory = airlinerDirectory;
+       this.flightDetailsDirectory = flightDetailsDirectory;
        //this.fleetDirectory=fleetDirectory;
        populatetable();
     }
@@ -199,7 +201,7 @@ public class AirlineWorkArea extends javax.swing.JPanel {
         //Airliner a = (Airliner) tableAirline.getValueAt(selectedrow,0);
         Airliner a = airlinerDirectory.getAirlinerIndex(selectedrow);
         System.out.println(a);
-        ViewAirDetails var = new ViewAirDetails(CardSequenceJPanel, a);
+        ViewAirDetails var = new ViewAirDetails(CardSequenceJPanel, a,flightDetailsDirectory);
         CardSequenceJPanel.add(var);
         CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
                 layout.next(CardSequenceJPanel);

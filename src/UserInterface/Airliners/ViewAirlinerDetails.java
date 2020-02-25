@@ -107,7 +107,7 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Flight Number");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 140, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 150, 30));
 
         txtFlightNo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtFlightNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 300, 30));
@@ -139,8 +139,8 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel6.setText("Departure Date");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, -1, -1));
+        jLabel6.setText("Departure Date(yyyy-MM-dd HH:mm:ss)");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
 
         txtDepDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtDepDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 300, 30));
@@ -179,8 +179,8 @@ public class ViewAirlinerDetails extends javax.swing.JPanel {
         add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 490, 100, 50));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel8.setText("Arrival Date");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, -1, -1));
+        jLabel8.setText("Arrival Date(yyyy-MM-dd HH:mm:ss)");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
 
         txtArrDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtArrDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, 300, 30));
