@@ -167,7 +167,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel4.setBackground(new java.awt.Color(204, 204, 255));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel4.setText("Flight Number");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, -1, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, -1, 30));
 
         txtFlightNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         txtFlightNumber.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
@@ -207,7 +207,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         jLabel7.setBackground(new java.awt.Color(204, 204, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel7.setText("Price");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, -1, 42));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, -1, 30));
 
         txtPrice.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, 250, 30));
@@ -269,7 +269,7 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel12.setText("Seat");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 420, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel13.setText("Airliner");
@@ -278,37 +278,38 @@ public class ViewCustomerDetails extends javax.swing.JPanel {
         airlinerTxtField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         add(airlinerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, 250, 30));
 
-        jLabel14.setText("i");
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel14.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 470, 20, 20));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, 30, 30));
 
-        jLabel15.setText("i");
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel15.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 20, 20));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 30, 30));
 
-        jLabel16.setText("i");
+        jLabel16.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel16.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 20, 20));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 30, 30));
 
-        jLabel17.setText("i");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel17.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 20, 20));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 30, 30));
 
-        jLabel18.setText("i");
+        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Users\\Girija Dhawale\\Desktop\\AED_Project\\AED_GroupProjects\\src\\UserInterface\\TravelAgency\\circle-cropped.png")); // NOI18N
         jLabel18.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, 20, 20));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 270, 30, 30));
 
-        jLabel19.setText("i");
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel19.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 320, 20, 20));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 320, 30, 30));
 
-        jLabel20.setText("i");
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel20.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 20, 20));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 30, 30));
 
-        jLabel21.setText("i");
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/TravelAgency/circle-cropped.png"))); // NOI18N
         jLabel21.setToolTipText("Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)");
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, 20, 20));
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, 30, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed

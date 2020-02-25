@@ -114,11 +114,11 @@ private void backAction() {
         setBackground(new java.awt.Color(220, 255, 255));
 
         txtFlightNo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtFlightNo.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtFlightNo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtFlightNo.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         txtDeparture.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtDeparture.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtDeparture.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtDeparture.setSelectionColor(new java.awt.Color(255, 255, 255));
         txtDeparture.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +127,7 @@ private void backAction() {
         });
 
         txtArrival.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtArrival.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtArrival.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtArrival.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         fnolabel.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -169,7 +169,7 @@ private void backAction() {
         pricelabel.setText("Price");
 
         txtPrice.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtPrice.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtPrice.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtPrice.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         addbtn.setBackground(new java.awt.Color(255, 255, 255));
@@ -183,7 +183,7 @@ private void backAction() {
         });
 
         txtDepDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtDepDate.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtDepDate.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtDepDate.setSelectionColor(new java.awt.Color(255, 255, 255));
         txtDepDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,15 +192,15 @@ private void backAction() {
         });
 
         txtSeats.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtSeats.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtSeats.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtSeats.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         txtAirliner.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtAirliner.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtAirliner.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtAirliner.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         txtAirline.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtAirline.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtAirline.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtAirline.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -212,7 +212,7 @@ private void backAction() {
         jLabel3.setText("Airliner");
 
         txtArrivalDate.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtArrivalDate.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtArrivalDate.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         txtArrivalDate.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         datelabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
