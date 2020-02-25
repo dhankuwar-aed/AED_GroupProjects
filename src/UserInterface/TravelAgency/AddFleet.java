@@ -58,8 +58,6 @@ public class AddFleet extends javax.swing.JPanel {
         txtAirlinerName = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        txtSeats = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(220, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,14 +116,7 @@ public class AddFleet extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 110, 40));
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel4.setText("Seats");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 50, -1));
-
-        txtSeats.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        add(txtSeats, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 280, 30));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 130, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -147,15 +138,15 @@ public class AddFleet extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, airlineNo + " is not a valid number.");
             return;
         }
-         String seats= txtSeats.getText();
-       try {
-            Integer.parseInt(seats);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, seats + " is not a valid number.");
-            return;
-        }
+//         String seats= txtSeats.getText();
+//       try {
+//            Integer.parseInt(seats);
+//        } catch (NumberFormatException e) {
+//            JOptionPane.showMessageDialog(null, seats + " is not a valid number.");
+//            return;
+//        }
 
-        Airline airline = new Airline(txtAirlinerName.getText(),airlineName,Integer.parseInt(airlineNo),Integer.parseInt(seats));
+        Airline airline = new Airline(txtAirlinerName.getText(),airlineName,Integer.parseInt(airlineNo),Integer.parseInt("0"));
         airlineDirectory.addAirliner(airline);
         for(Airline x : airlineDirectory.getAirlineDirectory())
         System.out.println(x.getAirlineName());
@@ -194,7 +185,7 @@ public class AddFleet extends javax.swing.JPanel {
         txtAirlinerName.setText("");
         txtModel.setText("");
         txtName.setText("");
-        txtSeats.setText("");
+        //txtSeats.setText("");
         
        
     }//GEN-LAST:event_btnAddActionPerformed
@@ -225,11 +216,9 @@ public class AddFleet extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtAirlinerName;
     private javax.swing.JTextField txtModel;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtSeats;
     // End of variables declaration//GEN-END:variables
 }

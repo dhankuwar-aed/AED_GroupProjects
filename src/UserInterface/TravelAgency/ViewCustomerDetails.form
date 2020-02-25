@@ -506,7 +506,7 @@
     <Component class="javax.swing.JLabel" name="jLabel18">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Girija Dhawale\Desktop\AED_Project\AED_GroupProjects\src\UserInterface\TravelAgency\circle-cropped.png"/>
+          <Image iconType="3" name="/UserInterface/TravelAgency/circle-cropped.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Changes in flight details not allowed from here. In case of change of any details please contact the airliner (Contact details for airliner can be found on their official website)"/>
       </Properties>

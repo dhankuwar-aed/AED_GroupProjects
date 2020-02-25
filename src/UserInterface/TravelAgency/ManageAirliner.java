@@ -96,7 +96,7 @@ public class ManageAirliner extends javax.swing.JPanel {
 
     private void btnManageAirlinerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAirlinerActionPerformed
         // TODO add your handling code here:
-        AirlineWorkArea awa = new AirlineWorkArea(CardSequenceJPanel, airDict, airlinerDirectory);
+        AirlineWorkArea awa = new AirlineWorkArea(CardSequenceJPanel, airDict, airlinerDirectory,flightDetailsDirectory);
         CardSequenceJPanel.add(awa);
          CardLayout layout = (CardLayout)CardSequenceJPanel.getLayout();
         layout.next(CardSequenceJPanel);
